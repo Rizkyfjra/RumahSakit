@@ -1,0 +1,77 @@
+server {
+    listen 80 ;
+    listen [::]:80 ;
+
+    server_name smpn1sumber.edubox.cloud;
+
+        location / {
+
+
+				root /var/www/pinisi-smpn1sumber/smpn1sumber/;
+				index index.php index.html index.htm;
+
+				try_files $uri $uri/ /index.php?$args;
+
+				# Specify log locations for current site
+				access_log /var/www/pinisi-smpn1sumber/access.log;
+				error_log /var/www/pinisi-smpn1sumber/error.log;
+
+				location ~ /\. {
+					deny all;
+					access_log off;
+					log_not_found off;
+				}
+
+				location ~ /(protected|framework|nbproject) {
+					deny all;
+					access_log off;
+					log_not_found off;
+				}
+
+				location ~ /themes/\w+/views {
+					deny all;
+					access_log off;
+					log_not_found off;
+				}
+
+		       location ~* \.(js|css|png|jpg|jpeg|gif|bmp|ico)$ {
+		                expires 24h;
+		                log_not_found off;
+		        }
+
+				location ~ \.php$ {
+					try_files $uri =404;
+
+					# Fix for server variables that behave differently under nginx/php-fpm than typically expected
+					fastcgi_split_path_info ^(.+\.php)(/.+)$;
+					# Include the standard fastcgi_params file included with nginx
+					include fastcgi_params;
+					fastcgi_param  PATH_INFO        $fastcgi_path_info;
+					fastcgi_index index.php;
+					# Override the SCRIPT_FILENAME variable set by fastcgi_params
+					fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+					# Pass to upstream PHP-FPM; This must match whatever you name your upstream connection
+					#fastcgi_pass phpfpm-p;
+					fastcgi_pass 127.0.0.1:9000;
+
+					#BUFF
+					fastcgi_connect_timeout 600;
+					fastcgi_send_timeout 600;
+					fastcgi_read_timeout 600;
+					fastcgi_buffer_size 256k;
+					fastcgi_buffers 8 256k;
+
+					fastcgi_busy_buffers_size	256k;
+					fastcgi_temp_file_write_size	256k;
+					fastcgi_intercept_errors	on;
+					fastcgi_ignore_client_abort	off;
+				}
+
+				location ~* /images/.*\.php$ {
+					return 403;
+ 				error_page 403 /error.html;
+				}
+
+
+	 }
+}

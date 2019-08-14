@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7 (28169) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Web-UI---Guru" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Dashboard" transform="translate(-33.000000, -559.000000)" fill="#FFFFFF">
+            <path d="M50,564 L40,564 L40,562 L50,562 L50,564 Z M46,572 L40,572 L40,570 L46,570 L46,572 Z M50,568 L40,568 L40,566 L50,566 L50,568 Z M51,559 L39,559 C37.8954305,559 37,559.895431 37,561 L37,573 C37,574.104569 37.8954305,575 39,575 L51,575 C52.1045695,575 53,574.104569 53,573 L53,561 C53,559.895431 52.1045695,559 51,559 L51,559 Z M35,563 L33,563 L33,577 C33,578.104569 33.8954305,579 35,579 L49,579 L49,577 L35,577 L35,563 L35,563 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

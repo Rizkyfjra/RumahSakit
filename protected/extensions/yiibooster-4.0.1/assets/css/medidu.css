@@ -1,0 +1,246 @@
+@font-face {
+  font-family: 'titilium';
+  src: url('../fonts/TitilliumWeb-Regular.ttf');
+}
+
+body {
+    font-family: titilium,Droid sans,Arial;
+    color: #666;
+	font-size: 16px;
+	background-color: transparent;
+}
+
+html { 
+  background: url('../img/bg2.jpg') no-repeat center bottom fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+a {
+  color: #9d5308;
+}
+a:hover,
+a:focus {
+  color: #f2b21c;
+  text-decoration: none;
+}
+
+
+
+.glyphicon {
+	padding:5px;
+}
+
+.medidu-nav {
+	border-bottom: 0px;
+    background-color: #ecebe8;
+    border-bottom: 4px solid #f2871b;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+}
+	
+.medidu-brand {
+  height: 60px;
+  padding: 10px 10px;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #9d5308;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #f2b21c;
+  background-color: transparent;
+}
+
+.jumbotron{
+  background: transparent;
+  color:#363636;
+  min-height:550px;
+  margin-top:50px;
+  margin-bottom:10px;
+}
+
+.jumbotron p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 200;
+}
+.btn-primary {
+  background-color: #1cadab;
+  border-color: #109f9e;
+}
+a.bg-primary:hover {
+  background-color: #fbb902;
+}
+
+.panel-medidu {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+  background-color:rgba(255,255,255,0.8);
+}
+
+.panel-heading {
+  border-bottom: 2px solid #f2871b;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  color: #fff;
+  background-color: #1cadab;
+}
+
+.con-pelajaran {
+  margin:5px;
+  width: 180px;
+  height: 230px;
+  display: inline-block;
+  border-radius:3px;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3);
+}
+
+.con-pelajaran:hover {
+  box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.7);
+}
+
+.bg1 {
+	background: url('../img/l1.png') no-repeat center center; 
+}
+.bg2 {
+	background: url('../img/l2.png') no-repeat center center; 
+}
+.bg3 {
+	background: url('../img/l3.png') no-repeat center center; 
+}
+.bg4 {
+	background: url('../img/l4.png') no-repeat center center; 
+}
+
+.panel-pelajaran {
+  width: 180px;
+  height: 180px;
+  border-radius:3px 3px 0 0;
+}
+
+.panel-nama {
+  padding: 5px;
+  background-color:#efefef;
+  height: 50px;
+  border-radius:0 0 3px 3px;
+  text-align: left;
+}
+
+.breadcrumb {
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+@media screen and (max-width: 640px) {
+  .logo {
+    width: auto;
+    height: 30px;
+  } 
+}
+
+.nav-tabs {
+  border-bottom: 2px solid #f2871b;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+  color: #fff;
+  background-color: #1cadab;
+  border: none;
+  border-bottom-color: transparent;
+}
+
+.tab-content {
+	padding: 20px;
+}
+
+.list-group {
+  width: 100%;
+}
+ 
+/* -- padding dan margin -- */ 
+
+
+.padt10  {
+	padding-top:10px;
+}
+.margint60  {
+	margin-top:60px;
+}
+.margint70  {
+	margin-top:70px;
+}
+.margint80  {
+	margin-top:80px;
+}
+.margint90  {
+	margin-top:90px;
+}
+
+/* -- animasi foto profile -- */ 
+
+.media
+    {
+        /*box-shadow:0px 0px 4px -2px #000;*/
+        margin: 10px 0;
+        padding: 20px;
+    }
+    .dp
+    {
+        border:11px solid #e1d7b9;
+        transition: all 0.2s ease-in-out;
+    }
+    .dp:hover
+    {
+        border:3px solid #e1d7b9;
+        -ms-transform:rotate(360deg);  
+        -webkit-transform:rotate(360deg);  
+        /*-webkit-font-smoothing:antialiased;*/
+    }
+	
+	
+	
+13
+14
+15
+	
+@media screen and (min-width: 1px) and (max-width: 767px){
+    #columns[data-columns]::before {
+        content: '2 .col-xs-6';
+    }
+}
+@media screen and (min-width:768px) and (max-width: 991px){
+    #columns[data-columns]::before {
+        content: '3 .col-sm-4';
+    }
+}
+@media screen and (min-width:992px) and (max-width: 9999px){
+    #columns[data-columns]::before {
+        content: '4 .col-md-3';
+    }
+}
+
+
+
+
+
+
+.stackable .stackable-header {
+    border-radius: 4px 4px 0px 0px;
+    border-width: 0px;
+    padding: 10px 45px 5px 12px;
+    min-height: 86px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+	background-color: #53B5C1;
+}
+.shadow-brick {
+    box-shadow: 0px 3px 0px #AEAEAE;
+}

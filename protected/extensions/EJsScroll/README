@@ -1,0 +1,27 @@
+Version 1.0
+
+	To use the EJsScroll Extract archive in your extensions folder
+	To include this javascript scrollbar in your page:
+	
+ 
+//you have to put this code in your view or controller file
+1)
+Yii::app()->clientScript->registerCoreScript('jquery'); //if you do not set it yet
+
+2)
+$this->widget('ext.EJsScroll.EJsScroll',
+    array(
+        'selector' => '#content',
+        'showArrowsBar'=>false
+    )
+);
+
+where
+'selector' is the div or whatever you want to do scrollable
+'showArrowsBar' false or true to show box-arrows on the edge of the scrollbar
+
+also if you want to styling a selector (to make it scrollable) on specific action you can add this (as example)
+Yii::app()->clientScript->registerCss('MyScrollPage','#content {position:relative; top:20px; height:500px; width:800px; margin:auto;}');
+
+you could modify jquery.jscrollpane.css and the scrollstyle.css files of
+protected/extensions/EJsScroll/assets/css folder to styling the scrollbar. (on YII_DEBUG = true)
